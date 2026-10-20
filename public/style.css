@@ -1,0 +1,206 @@
+:root {
+    --wa-green: #25D366;
+    --wa-green-hover: #20bd5a;
+    --wa-bg: #111b21;
+    --wa-card-bg: #202c33;
+    --wa-border: #2a3942;
+    --wa-input-bg: #111b21;
+    --wa-text-muted: #8696a0;
+    --wa-teal: #128C7E;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--wa-bg);
+    background-image: radial-gradient(#202c33 1px, transparent 0);
+    background-size: 24px 24px;
+    color: #e9edef;
+    min-height: 100vh;
+}
+
+/* Layout Containers */
+.chat-container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.form-card {
+    background-color: var(--wa-card-bg);
+    border: 1px solid var(--wa-border);
+    border-radius: 20px;
+    padding: 32px;
+    width: 100%;
+    max-width: 540px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.header-box {
+    background: var(--wa-card-bg);
+    border: 1px solid var(--wa-border);
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn-whatsapp {
+    background-color: var(--wa-green);
+    color: #111b21;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--wa-green-hover);
+    color: #111b21;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-cancel {
+    background-color: transparent;
+    border: 1px solid var(--wa-border);
+    color: var(--wa-text-muted);
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-cancel:hover {
+    background-color: #2a3942;
+    color: #ffffff;
+}
+
+/* Cards & Items */
+.chat-card {
+    background-color: var(--wa-card-bg);
+    border: 1px solid var(--wa-border);
+    border-radius: 14px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.chat-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--wa-green);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.chat-card:hover {
+    background-color: #2a3942;
+    transform: translateX(4px);
+}
+
+.chat-card:hover::before {
+    opacity: 1;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00a884, #128c7e);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Form Controls */
+.form-label {
+    color: #d1d7db;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.input-group-text {
+    background-color: var(--wa-input-bg);
+    border-color: var(--wa-border);
+    color: var(--wa-text-muted);
+    border-radius: 12px 0 0 12px;
+}
+
+.form-control {
+    background-color: var(--wa-input-bg);
+    border-color: var(--wa-border);
+    color: #e9edef;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.input-group .form-control {
+    border-radius: 0 12px 12px 0;
+}
+
+.form-control:focus {
+    background-color: var(--wa-input-bg);
+    border-color: var(--wa-green);
+    color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.2);
+}
+
+/* Metadata & Info Boxes */
+.chat-info-badge {
+    background-color: var(--wa-input-bg);
+    border: 1px solid var(--wa-border);
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+
+.sender-badge {
+    color: #00a884;
+    font-weight: 600;
+}
+
+.receiver-badge {
+    color: #8696a0;
+    font-weight: 500;
+}
+
+.time-text {
+    color: var(--wa-text-muted);
+    font-size: 0.78rem;
+}
+
+.chat-message {
+    color: #d1d7db;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.form-header-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(37, 211, 102, 0.12);
+    color: var(--wa-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}

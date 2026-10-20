@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp - New Chat</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts & Bootstrap Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="d-flex align-items-center justify-content-center py-5 min-vh-100">
+
+    <div class="form-card">
+        <div class="d-flex align-items-center gap-3 mb-4">
+            <div class="form-header-icon">
+                <i class="bi bi-chat-plus-fill"></i>
+            </div>
+            <div>
+                <h4 class="fw-bold mb-0 text-white">New Message</h4>
+                <small class="text-secondary">Send a dynamic chat message</small>
+            </div>
+        </div>
+
+        <form action="/chats" method="POST">
+            <div class="mb-3">
+                <label for="sender" class="form-label">Sender Name</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" id="sender" name="sender" class="form-control" placeholder="e.g. Alice" required autocomplete="off">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="receiver" class="form-label">Receiver Name</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-check-fill"></i></span>
+                    <input type="text" id="receiver" name="receiver" class="form-control" placeholder="e.g. Bob" required autocomplete="off">
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" rows="4" class="form-control" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <div class="d-flex flex-column gap-2">
+                <button type="submit" class="btn btn-whatsapp justify-content-center py-2 fs-6">
+                    <i class="bi bi-send-fill"></i> Send Message
+                </button>
+                <a href="/chats" class="btn btn-cancel">Cancel & Go Back</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New chat</title>
+</head>
+<body>
+    <h2>Your new chat is here</h2>
+    <br>
+    <form action="/chats" method="POST">
+        <label for="sender">Sender:</label>
+        <input type="text" id="sender" name="sender" required>
+        <br><br>
+        <label for="receiver">Receiver:</label>
+        <input type="text" id="receiver" name="receiver" required>
+        <br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br><br>
+        <button type="submit">Send</button>
+</body>
+</html> -->
